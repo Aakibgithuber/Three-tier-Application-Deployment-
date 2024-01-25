@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: public.ecr.aws/e3i3d3z5/three-tier-frontend-d:latest
+        image: public.ecr.aws/l0l7e4u1/3-tier-frontend:latest
         imagePullPolicy: Always
         env:
           - name: REACT_APP_BACKEND_URL
