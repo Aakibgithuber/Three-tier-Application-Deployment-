@@ -11,7 +11,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: app.trainwithshubham.com
+    - host: your_app.com #you could also add load balancer address here if you don't have any domain 
       http:
         paths:
           - path: /api
