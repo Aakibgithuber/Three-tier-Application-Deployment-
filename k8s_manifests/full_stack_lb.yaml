@@ -1,4 +1,3 @@
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -11,14 +10,14 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: your_app.com #you could also add load balancer address here if you don't have any domain 
+    - host: k8s-workshop-mainlb-1234567890.us-west-2.elb.amazonaws.com
       http:
         paths:
           - path: /api
             pathType: Prefix
             backend:
               service:
-                name: api
+                name: backend
                 port:
                   number: 8080
           - path: /
