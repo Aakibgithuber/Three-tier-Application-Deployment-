@@ -10,10 +10,10 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: k8s-workshop-mainlb-1234567890.us-west-2.elb.amazonaws.com
+    - host: 
       http:
         paths:
-          - path: /api
+          - path: /backend
             pathType: Prefix
             backend:
               service:
