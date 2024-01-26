@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api
+  name: backend
   namespace: workshop
   labels:
-    role: api
+    role: backend
     env: demo
 spec:
   replicas: 1
@@ -15,14 +15,14 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      role: api
+      role: backend
   template:
     metadata:
       labels:
-        role: api
+        role: backend
     spec:
       containers:
-      - name: api
+      - name: backend
         image: public.ecr.aws/l0l7e4u1/3-tier-backend:latest
         imagePullPolicy: Always
         env:
